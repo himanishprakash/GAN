@@ -6,6 +6,8 @@
 
 Generative Adversarial Networks (GANs) are a class of machine learning models introduced by Ian Goodfellow and his colleagues in 2014. They are designed to generate data that mimics real-world data by using a competitive process between two neural networks: the generator and the discriminator. GANs can create convincing fake images, sounds, or even text. Unlike traditional machine learning models, GANs generate new data rather than just making predictions based on existing data.
 
+![alt text](image/architecture.png)
+
 ### History and Origin
 
 Ian Goodfellow, a deep learning researcher, invented GANs in 2014. His idea was to set up a game-like scenario where two neural networks compete against each other: one tries to create data (such as images), while the other evaluates the data’s authenticity. This back-and-forth process forces the generator to improve until it can produce data that the discriminator can no longer easily distinguish from real data. GANs quickly gained attention due to their ability to create realistic data in various domains such as image synthesis, video generation, and more.
@@ -25,6 +27,8 @@ Ian Goodfellow, a deep learning researcher, invented GANs in 2014. His idea was 
     - **Output Layer**: Uses a Tanh activation function to produce outputs in the range [-1, 1] or a sigmoid function for outputs between [0, 1].
 - **Output**: Generates a data sample **𝐺(𝑧)** intended to resemble a real data point.
 
+![alt text](image/generator.png)
+
 #### Discriminator Network
 
 - **Purpose**: Acts as a binary classifier to distinguish between real data and synthetic data produced by the generator.
@@ -35,6 +39,8 @@ Ian Goodfellow, a deep learning researcher, invented GANs in 2014. His idea was 
     - **Hidden Layers**: Often use Leaky ReLU activations to mitigate the vanishing gradient problem.
     - **Output Layer**: Uses a sigmoid activation function to output a probability score between 0 and 1.
 - **Output**: Outputs a scalar probability **𝐷(𝑥)** indicating the likelihood that the input is real (close to 1) or fake (close to 0).
+
+![alt text](image/descriminator.png)
 
 ### The Adversarial Process
 
